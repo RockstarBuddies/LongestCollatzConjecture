@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 int main() {
+	long inp;
 	long answer;
 	long long number;
 	int terms;
 	int dterm=0;
-	for (long start = 500000; start < 1000000; start++) {
+	printf("Enter number ");
+	scanf_s("%ld", &inp);
+	for (long start = inp/2; start < inp; start++) {
 		terms = 1;
 		number = start;
 		while (number > 1) {
@@ -23,6 +26,6 @@ int main() {
 			answer = start;
 		}
 	}
-	printf("\nLongest chain is: %d\nAnswer: %ld", dterm, answer);
+	printf("\nLongest Collatz Conjecture Sequence under %ld is %d\nAnswer: %ld",inp, dterm, answer);
 	return 0;
 }
